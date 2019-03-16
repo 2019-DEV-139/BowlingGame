@@ -75,4 +75,15 @@ class BowlingGameTests: XCTestCase {
         // Then
         XCTAssertFalse(isSpare)
     }
+    
+    func test_scoreFromStrike() {
+        // Given
+        let game = [10, 10, 8, 2, 6, 0]
+        
+        // When
+        let frameScore = SimpleCalculator.strikeScore(from: 0, in: game)
+        
+        // Then
+        XCTAssertEqual(frameScore, 28)
+    }
 }
