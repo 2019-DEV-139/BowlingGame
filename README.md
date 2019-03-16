@@ -16,15 +16,16 @@ git clone https://github.com/2019-DEV-139/BowlingGame.git
 4. Click `Run` (play icon) or press `⌘+R` key combination
 
 ## Usage
-![Screenshot](/screenshot.jpg?raw=true)
+![Screenshot](/screenshot.png?raw=true)
 
 
 App allows user to enter a custom bowling game in string representation and calculate the game score. It also offers a selection of several predefined games. Score is updated when "Calculate Score" button is tapped.
 
-App does not check if a game is valid.
+App does not check game validity.
 
 ## Project structure
-`SimpleCalculator`  - logic for bowling game score calculation.
-`GameStrings` - predefined game values
-`ViewController` - UI for game input
-`BowlingGameTests` - unit and integration tests for `SimpleCalculator` struct
+`SimpleCalculator`  - logic for bowling game score calculation.  
+`GameStrings` - predefined game values  
+`ViewController` - UI for game input  
+`BowlingGameTests` - unit and integration tests for `SimpleCalculator` struct  
+  
