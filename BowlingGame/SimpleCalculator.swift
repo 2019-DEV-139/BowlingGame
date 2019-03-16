@@ -11,6 +11,7 @@ import Foundation
 struct SimpleCalculator {
     //MARK:- Public method
     static func calculateScore(from gameString: String) -> Int {
+        // Convert string game input to numerical value of each throw
         let game = convertGameStringToValues(gameString)
         
         var score = 0
@@ -42,7 +43,7 @@ struct SimpleCalculator {
         // Remove spaces for easier enumeration and make uppercased for safety
         let shortenedGame = gameString.replacingOccurrences(of: " ", with: "").uppercased()
         
-        // Replace empty throws
+        // Replace empty throws with 0 value
         let gameArray = Array(shortenedGame.replacingOccurrences(of: "-", with: "0"))
         
         // Translate strings to numerical values
@@ -60,17 +61,16 @@ struct SimpleCalculator {
         return game
     }
     
+    //MARK:- Frame types
     static func isStrike(frameIndex index: Int, array: [Int]) -> Bool {
-        let currentValue = array[index]
-        return currentValue == 10
+        return array[index] == 10
     }
     
     static func isSpare(frameIndex index: Int, array: [Int]) -> Bool {
-        let currentValue = array[index]
-        let nextValue = array[index+1]
-        return currentValue + nextValue == 10
+        return array[index] + array[index+1] == 10
     }
     
+    //MARK:- Score calculation per frame
     static func strikeScore(from index: Int, in array: [Int]) -> Int {
         return 10 + array[index+1] + array[index+2]
     }

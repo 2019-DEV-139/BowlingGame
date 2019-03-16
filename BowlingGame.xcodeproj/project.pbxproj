@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		65154772223D7D9200F40132 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 65154771223D7D9200F40132 /* README.md */; };
 		65190377223D26FD000AAE65 /* GameStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65190376223D26FD000AAE65 /* GameStrings.swift */; };
 		65190379223D2748000AAE65 /* SimpleCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65190378223D2748000AAE65 /* SimpleCalculator.swift */; };
 		657DFB6E223D13570067E258 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657DFB6D223D13570067E258 /* AppDelegate.swift */; };
@@ -28,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		65154771223D7D9200F40132 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		65190376223D26FD000AAE65 /* GameStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameStrings.swift; sourceTree = "<group>"; };
 		65190378223D2748000AAE65 /* SimpleCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleCalculator.swift; sourceTree = "<group>"; };
 		657DFB6A223D13570067E258 /* BowlingGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BowlingGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -83,12 +85,13 @@
 			children = (
 				65190376223D26FD000AAE65 /* GameStrings.swift */,
 				65190378223D2748000AAE65 /* SimpleCalculator.swift */,
-				657DFB6D223D13570067E258 /* AppDelegate.swift */,
 				657DFB6F223D13570067E258 /* ViewController.swift */,
+				657DFB6D223D13570067E258 /* AppDelegate.swift */,
 				657DFB71223D13570067E258 /* Main.storyboard */,
 				657DFB74223D13580067E258 /* Assets.xcassets */,
 				657DFB76223D13580067E258 /* LaunchScreen.storyboard */,
 				657DFB79223D13580067E258 /* Info.plist */,
+				65154771223D7D9200F40132 /* README.md */,
 			);
 			path = BowlingGame;
 			sourceTree = "<group>";
@@ -185,6 +188,7 @@
 			files = (
 				657DFB78223D13580067E258 /* LaunchScreen.storyboard in Resources */,
 				657DFB75223D13580067E258 /* Assets.xcassets in Resources */,
+				65154772223D7D9200F40132 /* README.md in Resources */,
 				657DFB73223D13570067E258 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
