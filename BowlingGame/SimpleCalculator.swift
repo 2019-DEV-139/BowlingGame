@@ -15,18 +15,23 @@ struct SimpleCalculator {
         
         var score = 0
         var frameIndex = 0
+        var frames = 0
         // Go through frames and add scores
         repeat {
+            frames += 1
+            
             if isStrike(frameIndex: frameIndex, array: game) {
                 score += strikeScore(from: frameIndex, in: game)
                 frameIndex += 1
             } else if isSpare(frameIndex: frameIndex, array: game) {
                 score += spareScore(from: frameIndex, in: game)
+                frameIndex += 2
             } else {
                 score += regularScore(from: frameIndex, in: game)
+                frameIndex += 2
             }
-            frameIndex += 2
-        } while frameIndex < game.count
+            
+        } while frames < 10
         
         return score
     }
