@@ -20,4 +20,26 @@ class BowlingGameTests: XCTestCase {
         // Then
         XCTAssertEqual(game, [10, 6, 4, 5, 0, 10])
     }
+    
+    func test_isStrike_true() {
+        // Given
+        let game = [10]
+        
+        // When
+        let isStrike = SimpleCalculator.isStrike(frameIndex: 0, array: game)
+        
+        // Then
+        XCTAssertTrue(isStrike)
+    }
+    
+    func test_isStrike_false() {
+        // Given
+        let game = [6, 4, 10]
+        
+        // When
+        let isStrike = SimpleCalculator.isStrike(frameIndex: 0, array: game)
+        
+        // Then
+        XCTAssertFalse(isStrike)
+    }
 }
