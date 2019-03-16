@@ -11,15 +11,4 @@ import XCTest
 
 class BowlingGameTests: XCTestCase {
 
-    func test_allNines() {
-        // Given
-        let game = GameStrings.nines
-        
-        // When
-        let score = try? SimpleCalculator.calculateScore(from: game)
-        
-        // Then
-        XCTAssertEqual(score, 90)
-    }
-
 }
