@@ -108,4 +108,37 @@ class BowlingGameTests: XCTestCase {
         // Then
         XCTAssertEqual(frameScore, 8)
     }
+    
+    func test_gameScore_allNines() {
+        // Given
+        let game = GameStrings.nines
+        
+        // When
+        let score = try? SimpleCalculator.calculateScore(from: game)
+        
+        // Then
+        XCTAssertEqual(score, 90)
+    }
+    
+    func test_gameScore_allSaves() {
+        // Given
+        let game = GameStrings.saves
+        
+        // When
+        let score = try? SimpleCalculator.calculateScore(from: game)
+        
+        // Then
+        XCTAssertEqual(score, 150)
+    }
+    
+    func test_gameScore_allStrikes() {
+        // Given
+        let game = GameStrings.perfect
+        
+        // When
+        let score = try? SimpleCalculator.calculateScore(from: game)
+        
+        // Then
+        XCTAssertEqual(score, 300)
+    }
 }
