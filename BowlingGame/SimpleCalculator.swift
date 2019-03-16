@@ -61,7 +61,9 @@ struct SimpleCalculator {
     }
     
     static func isSpare(frameIndex index: Int, array: [Int]) -> Bool {
-        return false
+        let currentValue = array[index]
+        let nextValue = array[index+1]
+        return currentValue + nextValue == 10
     }
     
     static func strikeScore(from index: Int, in array: [Int]) -> Int {

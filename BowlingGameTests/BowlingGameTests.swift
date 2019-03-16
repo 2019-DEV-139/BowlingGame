@@ -42,4 +42,37 @@ class BowlingGameTests: XCTestCase {
         // Then
         XCTAssertFalse(isStrike)
     }
+    
+    func test_isSpare_true() {
+        // Given
+        let game = [3, 7]
+        
+        // When
+        let isSpare = SimpleCalculator.isSpare(frameIndex: 0, array: game)
+        
+        // Then
+        XCTAssertTrue(isSpare)
+    }
+    
+    func test_isSpare_complex_true() {
+        // Given
+        let game = [10, 5, 0, 8, 2, 10]
+        
+        // When
+        let isSpare = SimpleCalculator.isSpare(frameIndex: 3, array: game)
+        
+        // Then
+        XCTAssertTrue(isSpare)
+    }
+    
+    func test_isSpare_false() {
+        // Given
+        let game = [0, 7]
+        
+        // When
+        let isSpare = SimpleCalculator.isSpare(frameIndex: 0, array: game)
+        
+        // Then
+        XCTAssertFalse(isSpare)
+    }
 }
