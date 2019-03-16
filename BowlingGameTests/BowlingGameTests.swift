@@ -10,5 +10,14 @@ import XCTest
 @testable import BowlingGame
 
 class BowlingGameTests: XCTestCase {
-
+    func test_gameStringConversion() {
+        // Given
+        let stringGame = "X 6/ 5- X"
+        
+        // When
+        let game = SimpleCalculator.convertGameStringToValues(stringGame)
+        
+        // Then
+        XCTAssertEqual(game, [10, 6, 4, 5, 0, 10])
+    }
 }
