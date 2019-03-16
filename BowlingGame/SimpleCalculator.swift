@@ -75,6 +75,6 @@ struct SimpleCalculator {
     }
     
     static func regularScore(from index: Int, in array: [Int]) -> Int {
-        return 0
+        return array[index] + array[index+1]
     }
 }

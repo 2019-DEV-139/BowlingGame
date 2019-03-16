@@ -97,4 +97,15 @@ class BowlingGameTests: XCTestCase {
         // Then
         XCTAssertEqual(frameScore, 16)
     }
+    
+    func test_scoreFromRegularFrame() {
+        // Given
+        let game = [10, 10, 8, 2, 6, 0]
+        
+        // When
+        let frameScore = SimpleCalculator.regularScore(from: 3, in: game)
+        
+        // Then
+        XCTAssertEqual(frameScore, 8)
+    }
 }
