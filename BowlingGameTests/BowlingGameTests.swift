@@ -86,4 +86,15 @@ class BowlingGameTests: XCTestCase {
         // Then
         XCTAssertEqual(frameScore, 28)
     }
+    
+    func test_scoreFromSpare() {
+        // Given
+        let game = [10, 10, 8, 2, 6, 0]
+        
+        // When
+        let frameScore = SimpleCalculator.spareScore(from: 2, in: game)
+        
+        // Then
+        XCTAssertEqual(frameScore, 16)
+    }
 }

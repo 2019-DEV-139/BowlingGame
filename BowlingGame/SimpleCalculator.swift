@@ -71,7 +71,7 @@ struct SimpleCalculator {
     }
     
     static func spareScore(from index: Int, in array: [Int]) -> Int {
-        return 10 // add next throw
+        return 10 + array[index+2]
     }
     
     static func regularScore(from index: Int, in array: [Int]) -> Int {
