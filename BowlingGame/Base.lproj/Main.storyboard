@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,13 +13,149 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BowlingGame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type in a game" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="9Ue-Qx-GNu" userLabel="textField">
+                                <rect key="frame" x="15" y="174" width="345" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="IeL-Ml-g5Y"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="HXK-6V-B4B"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game input:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="26M-B3-ftu">
+                                <rect key="frame" x="16" y="152" width="344" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gvt-ZG-Inb">
+                                <rect key="frame" x="15" y="224" width="60" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Pwf-wI-Oia"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="RHg-Ib-pUs"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OrP-oa-DNU">
+                                <rect key="frame" x="85" y="224" width="275" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="QbV-C2-1Rw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pre-fill a game:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iAp-Eg-d8q">
+                                <rect key="frame" x="15" y="295" width="345" height="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="17" id="vKP-G2-oDI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aOX-es-7Ql" userLabel="buttonPerfectGame">
+                                <rect key="frame" x="15" y="322" width="345" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="sGY-rA-EKM"/>
+                                </constraints>
+                                <state key="normal" title="X X X X X X X X X X X X"/>
+                                <connections>
+                                    <action selector="buttonPerfectGameTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xcl-p2-E0K"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rXQ-zQ-dXh" userLabel="buttonAllNines">
+                                <rect key="frame" x="15" y="377" width="345" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="hu7-wk-Jvh"/>
+                                </constraints>
+                                <state key="normal" title="9- 9- 9- 9- 9- 9- 9- 9- 9- 9-"/>
+                                <connections>
+                                    <action selector="buttonAllNinesTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pf3-H0-Ghc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mfz-Iq-zsj" userLabel="buttonAllSpares">
+                                <rect key="frame" x="15" y="432" width="345" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="uqh-m6-XF4"/>
+                                </constraints>
+                                <state key="normal" title="5/ 5/ 5/ 5/ 5/ 5/ 5/ 5/ 5/ 5/5"/>
+                                <connections>
+                                    <action selector="buttonAllSavesTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="MlG-zU-kPY"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wP4-lj-Obf">
+                                <rect key="frame" x="15" y="50" width="345" height="72"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="jCH-cd-265"/>
+                                </constraints>
+                                <string key="text">2019_DEV_139
+                                    
+                                    
+Bowling Game</string>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l3Q-Sl-yMH" userLabel="buttonCalculate">
+                                <rect key="frame" x="50" y="587" width="275" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="ttm-8O-mcm"/>
+                                </constraints>
+                                <state key="normal" title="Calculate Score"/>
+                                <connections>
+                                    <action selector="buttonCalculateTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="eO1-9E-pgf"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="aOX-es-7Ql" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="15" id="0rB-dH-YMW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="l3Q-Sl-yMH" secondAttribute="bottom" constant="50" id="1cp-GJ-QFN"/>
+                            <constraint firstItem="OrP-oa-DNU" firstAttribute="centerY" secondItem="Gvt-ZG-Inb" secondAttribute="centerY" id="3WW-mZ-by1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="l3Q-Sl-yMH" secondAttribute="trailing" constant="50" id="7Mu-Jd-RJd"/>
+                            <constraint firstItem="9Ue-Qx-GNu" firstAttribute="top" secondItem="26M-B3-ftu" secondAttribute="bottom" constant="5" id="9CE-ad-wts"/>
+                            <constraint firstItem="Gvt-ZG-Inb" firstAttribute="top" secondItem="9Ue-Qx-GNu" secondAttribute="bottom" constant="20" id="AIe-I3-CQG"/>
+                            <constraint firstItem="9Ue-Qx-GNu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="ICx-SI-5r1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aOX-es-7Ql" secondAttribute="trailing" constant="15" id="Mvn-fT-at9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wP4-lj-Obf" secondAttribute="trailing" constant="15" id="NHx-Ke-fDp"/>
+                            <constraint firstItem="wP4-lj-Obf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="PsP-rv-1v1"/>
+                            <constraint firstItem="rXQ-zQ-dXh" firstAttribute="top" secondItem="aOX-es-7Ql" secondAttribute="bottom" constant="25" id="Ro0-D2-nGm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OrP-oa-DNU" secondAttribute="trailing" constant="15" id="Wwg-Wx-xLp"/>
+                            <constraint firstItem="l3Q-Sl-yMH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="Z7l-Jl-GOp"/>
+                            <constraint firstItem="iAp-Eg-d8q" firstAttribute="top" secondItem="Gvt-ZG-Inb" secondAttribute="bottom" constant="50" id="alf-kb-kpI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="26M-B3-ftu" secondAttribute="trailing" constant="15" id="b6T-LC-pdy"/>
+                            <constraint firstItem="Gvt-ZG-Inb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="gIn-ir-1vi"/>
+                            <constraint firstItem="iAp-Eg-d8q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="jFw-Dq-vs8"/>
+                            <constraint firstItem="26M-B3-ftu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="jKo-8K-mPI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rXQ-zQ-dXh" secondAttribute="trailing" constant="15" id="jto-So-Ij6"/>
+                            <constraint firstItem="mfz-Iq-zsj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="kpI-kj-W1x"/>
+                            <constraint firstItem="rXQ-zQ-dXh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="l0j-Gg-Aop"/>
+                            <constraint firstItem="26M-B3-ftu" firstAttribute="top" secondItem="wP4-lj-Obf" secondAttribute="bottom" constant="30" id="lpq-Co-Oo8"/>
+                            <constraint firstItem="mfz-Iq-zsj" firstAttribute="top" secondItem="rXQ-zQ-dXh" secondAttribute="bottom" constant="25" id="mP7-3h-oOF"/>
+                            <constraint firstItem="wP4-lj-Obf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="nAj-50-3I0"/>
+                            <constraint firstItem="aOX-es-7Ql" firstAttribute="top" secondItem="iAp-Eg-d8q" secondAttribute="bottom" constant="10" id="nee-T5-4a8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mfz-Iq-zsj" secondAttribute="trailing" constant="15" id="nzC-9F-sWK"/>
+                            <constraint firstItem="OrP-oa-DNU" firstAttribute="leading" secondItem="Gvt-ZG-Inb" secondAttribute="trailing" constant="10" id="pD8-9Y-ixw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="iAp-Eg-d8q" secondAttribute="trailing" constant="15" id="pmT-ZZ-b05"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9Ue-Qx-GNu" secondAttribute="trailing" constant="15" id="rMw-fx-ZvA"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="labelScore" destination="OrP-oa-DNU" id="gBW-qa-RhD"/>
+                        <outlet property="textField" destination="9Ue-Qx-GNu" id="FCs-mW-gSq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

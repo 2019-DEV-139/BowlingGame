@@ -114,7 +114,7 @@ class BowlingGameTests: XCTestCase {
         let game = GameStrings.nines
         
         // When
-        let score = try? SimpleCalculator.calculateScore(from: game)
+        let score = SimpleCalculator.calculateScore(from: game)
         
         // Then
         XCTAssertEqual(score, 90)
@@ -125,7 +125,7 @@ class BowlingGameTests: XCTestCase {
         let game = GameStrings.saves
         
         // When
-        let score = try? SimpleCalculator.calculateScore(from: game)
+        let score = SimpleCalculator.calculateScore(from: game)
         
         // Then
         XCTAssertEqual(score, 150)
@@ -136,7 +136,7 @@ class BowlingGameTests: XCTestCase {
         let game = GameStrings.perfect
         
         // When
-        let score = try? SimpleCalculator.calculateScore(from: game)
+        let score = SimpleCalculator.calculateScore(from: game)
         
         // Then
         XCTAssertEqual(score, 300)

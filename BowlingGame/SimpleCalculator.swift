@@ -10,7 +10,7 @@ import Foundation
 
 struct SimpleCalculator {
     //MARK:- Public method
-    static func calculateScore(from gameString: String) throws -> Int {
+    static func calculateScore(from gameString: String) -> Int {
         let game = convertGameStringToValues(gameString)
         
         var score = 0
